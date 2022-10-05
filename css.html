@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Name on the tab of site -->
+    <title>A Meaningful Page Title</title>
+
+    <!-- small icon on the tab of site -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    <!-- tag is most often used to link to external style sheets -->
+    <link rel="stylesheet" href="mystyle.css" />
+
+    <!-- Define the character set used -->
+    <meta charset="UTF-8" />
+
+    <!-- Define keywords for search engines -->
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+
+    <!-- Define a description of your web page -->
+    <meta name="description" content="Free Web tutorials" />
+
+    <!-- Define the author of a page -->
+    <meta name="author" content="John Doe" />
+
+    <!-- Refresh document every 30 seconds -->
+    <meta http-equiv="refresh" content="30" />
+
+    <!-- Setting the viewport to make your website look good on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <style>
+        body {
+            font-family: "Sofia", sans-serif;
+            font-size: 30px;
+        }
+
+        h2,
+        h3,
+        li {
+            font-family: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS<h1>
+            <h2>Background</h2>
+            <ul>
+                <li>
+                    <h3>background-color</h3>
+                    <xmp>
+                        body {
+                        background-color: lightblue;
+                        opacity: 0.3;
+                        <!-- or -->
+                        background: rgba(0, 128, 0, 0.3)
+                        }
+                    </xmp>
+                </li>
+                <li>
+                    <h3>background-image</h3>
+                    <xmp>
+                        body,p,div {
+                        background-image: url("paper.gif");
+                        <!-- repeat horizontal or no repeat -->
+                        background-repeat: repeat-x;
+                        background-repeat: no-repeat;
+                        background-position: right top;
+                        <!-- scroll with page or fixed -->
+                        background-attachment: fixed;
+                        background-attachment: scroll;
+                        }
+                    </xmp>
+                </li>
+                <li>
+                    <h3>background - Shorthand property</h3>
+                    <xmp>
+                        <!-- This -->
+                        body {
+                        background-color: #ffffff;
+                        background-image: url("img_tree.png");
+                        background-repeat: no-repeat;
+                        background-position: right top;
+                        }
+                        <!-- Will be this -->
+                        body {
+                        background: #ffffff url("img_tree.png") no-repeat right top;
+                        }
+                        <!-- Must be in this sort even if we remove one of them -->
+                    </xmp>
+                </li>
+            </ul>
+            <h2>Boarder</h2>
+            <ul>
+                <li>
+                    <h3>border-style</h3>
+                    <xmp>
+                        p {border-style: dotted;
+                        border-style: dashed;
+                        border-style: solid;
+                        border-style: double;
+                        border-style: groove;
+                        border-style: ridge;
+                        border-style: inset;
+                        border-style: outset;
+                        border-style: none;
+                        border-style: hidden;
+                        border-style: dotted dashed solid double;}
+                    </xmp>
+                </li>
+                <li>
+                    <h3>border-width</h3>
+                    <xmp>
+                        p {
+                        border-width: 5px;
+                        border-width: medium;
+                        border-width: thick;
+                        border-width: 5px 20px; /* 5px top and bottom, 20px on the sides */
+                        border-width: 25px 10px 4px 35px; /* 25px top, 10px right, 4px bottom and 35px left */
+                        }
+                    </xmp>
+                </li>
+                <li>
+                    <h3>border-color</h3>
+                    <xmp>
+                        p {
+                        border-color: #ff0000;
+                        border-color: rgb(255, 0, 0); /* red */
+                        border-color: hsl(0, 100%, 50%); /* red */
+                        }
+                    </xmp>
+                </li>
+                <li>
+                    <h3>border Shorthand Property</h3>
+                    <xmp>
+                        p {
+                        border: 5px solid red;
+                        }
+                    </xmp>
+                </li>
+                <li>
+                    <h3>border-radius</h3>
+                    <xmp>
+                        p {
+                        border-radius: 5px;
+                        }
+                    </xmp>
+                </li>
+            </ul>
+            <h2>Outline</h2>
+            <ul>
+                <li>
+                    <h3>outline-style</h3>
+                    <xmp>
+                        p {
+                        outline-style: dotted;
+                        outline-style: dashed;
+                        outline-style: solid;
+                        outline-style: double;
+                        outline-style: groove;
+                        outline-style: ridge;
+                        outline-style: inset;
+                        outline-style: outset;
+                        }
+                    </xmp>
+                </li>
+                <li>
+                    <h3>outline-width</h3>
+                    <xmp>
+                        p {
+                        outline-width: 5px;
+                        outline-width: medium;
+                        outline-width: thick;
+                        }
+                    </xmp>
+                </li>
+                <li>
+                    <h3>outline-color</h3>
+                    <xmp>
+                        p {
+                        outline-color: #ff0000;
+                        outline-color: rgb(255, 0, 0); /* red */
+                        outline-color: hsl(0, 100%, 50%); /* red */
+                        }
+                    </xmp>
+                </li>
+                <li>
+                    <h3>outline Shorthand Property</h3>
+                    <xmp>
+                        p {
+                        outline: 5px solid red;
+                        }
+                    </xmp>
+                </li>
+                <li>
+                    <h3>outline-offset</h3>
+                    <xmp>
+                        p {
+                        outline-offset: 5px;
+                        }
+                    </xmp>
+                </li>
+            </ul>
+            <h2>Margin</h2>
+            <ul>
+                <li>
+                    <h3>Individual Sides</h3>
+                    <xmp>
+                        p {
+                        margin-top: 100px;
+                        margin-bottom: 100px;
+                        margin-right: 150px;
+                        margin-left: 80px;
+                        }
+                    </xmp>
+                </li>
+                <li>
+                    <h3>Shorthand Property</h3>
+                    <xmp>
+                        p {
+                        margin: 25px 50px 75px 100px;
+                        <!-- remaining space will be split equally between the left and right margins -->
+                        margin: auto;
+                        }
+
+                    </xmp>
+                </li>
+                <li>
+                    <h3>Margin Collapse</h3>
+                    <xmp>
+                        h1 {
+                        margin: 0 0 50px 0;
+                        }
+
+                        h2 {
+                        margin: 20px 0 0 0;
+                        }
+                        <!-- In the example above, the <h1> element has a bottom margin of 50px and the <h2> element has a top margin set to 20px.
+Common sense would seem to suggest that the vertical margin between the <h1> and the <h2> would be a total of 70px (50px + 20px). But due to margin collapse, the actual margin ends up being 50px. -->
+                    </xmp>
+                </li>
+
+            </ul>
+            <h2>Padding</h2>
+            <ul>
+                <li>
+                    <h3>Individual Sides</h3>
+                    <xmp>
+                        p {
+                        padding-top: 100px;
+                        padding-bottom: 100px;
+                        padding-right: 150px;
+                        padding-left: 80px;
+                        }
+                    </xmp>
+                </li>
+                <li>
+                    <h3>padding Shorthand Property</h3>
+                    <xmp>
+                        p {
+                        padding: 25px 50px 75px 100px;
+                        padding: 25px 50px 75px;
+                        <!-- top padding is 25px -->
+                        <!-- right and left paddings are 50px -->
+                        <!-- bottom padding is 75px -->
+                        }
+                        padding: 25px 50px;
+                        <!-- top and bottom paddings are 25px -->
+                        <!-- right and left paddings are 50px -->
+                    </xmp>
+                </li>
+                <li>
+                    <h3>padding important note</h3>
+                    <xmp>
+                        <!-- Here, the <div> element is given a width of 300px. However, the actual width of the <div>
+                                element will be 350px (300px + 25px of left padding + 25px of right padding): -->
+                        div {
+                        width: 300px;
+                        padding: 25px;
+                        }
+
+                        <!-- Use the box-sizing property to keep the width at 300px, no matter the amount of padding: -->
+                        div {
+                        width: 300px;
+                        padding: 25px;
+                        box-sizing: border-box;
+                        }
+                    </xmp>
+                </li>
+            </ul>
+            <h2>Height and Width</h2>
+            <ul>
+                <li>auto - This is default. The browser calculates the height and width</li>
+                <li>length - Defines the height/width in px, cm, etc.</li>
+                <li>% - Defines the height/width in percent of the containing block</li>
+                <li>initial - Sets the height/width to its default value</li>
+                <li>inherit - The height/width will be inherited from its parent value</li>
+                <li>
+                    <xmp>
+                        div {
+                        height: 200px;
+                        width: 50%;
+                        background-color: powderblue;
+                        }
+                    </xmp>
+                </li>
+                <li>
+                    <xmp>
+                        div {
+                        height: 100px;
+                        width: 500px;
+                        background-color: powderblue;
+                        }
+                    </xmp>
+                </li>
+                <li>
+                    <h3>important note</h3>
+                    <xmp>
+                        <!-- The problem with the <div> above occurs when the browser window is smaller than the width of the element (500px). The browser then adds a horizontal scrollbar to the page. -->
+                        <!-- Using max-width instead, in this situation, will improve the browser's handling of small windows. -->
+                        <!-- If you for some reason use both the width property and the max-width property on the same element, and the value of the width property is larger than the max-width property; the max-width property will be used (and the width property will be ignored). -->
+                        div {
+                        max-width: 500px;
+                        height: 100px;
+                        background-color: powderblue;
+                        }
+                    </xmp>
+                </li>
+            </ul>
+            <h2>Box Model</h2>
+            <ul>
+                <li>auto - This is default. The browser calculates the height and width</li>
+                <li>length - Defines the height/width in px, cm, etc.</li>
+                <li>% - Defines the height/width in percent of the containing block</li>
+                <li>initial - Sets the height/width to its default value</li>
+                <li>inherit - The height/width will be inherited from its parent value</li>
+                <li>
+                    <xmp>
+                        div {
+                        height: 200px;
+                        width: 50%;
+                        background-color: powderblue;
+                        }
+                    </xmp>
+                </li>
+                <li>
+                    <xmp>
+                        div {
+                        height: 100px;
+                        width: 500px;
+                        background-color: powderblue;
+                        }
+                    </xmp>
+                </li>
+                <li>
+                    <h3>important note</h3>
+                    <xmp>
+                        <!-- The problem with the <div> above occurs when the browser window is smaller than the width of the element (500px). The browser then adds a horizontal scrollbar to the page. -->
+                        <!-- Using max-width instead, in this situation, will improve the browser's handling of small windows. -->
+                        <!-- If you for some reason use both the width property and the max-width property on the same element, and the value of the width property is larger than the max-width property; the max-width property will be used (and the width property will be ignored). -->
+                        div {
+                        max-width: 500px;
+                        height: 100px;
+                        background-color: powderblue;
+                        }
+                    </xmp>
+                    <xmp>
+                        <!-- This <div> element will have a total width of 350px:  -->
+                        div {
+                        width: 320px;
+                        padding: 10px;
+                        border: 5px solid gray;
+                        margin: 0;
+                        }
+                        <!-- 320px (width)
+                        + 20px (left + right padding)
+                        + 10px (left + right border)
+                        + 0px (left + right margin)
+                        = 350px -->
+                    </xmp>
+                </li>
+            </ul>
+            <h2>Text</h2>
+            <ul>
+                <li>
+                    <xmp>
+                        h1,p {
+                        background-color: black;
+                        color: white;
+                        text-align: center;
+                        text-align: left;
+                        text-align: right;
+                        <!-- every line has equal width, and the left and right margins are straight -->
+                        text-align: justify;
+                        }
+                    </xmp>
+                </li>
+                <li>
+                    <h3>Text Direction</h3>
+                    <xmp>
+                        p {
+                        direction: rtl;
+                        unicode-bidi: bidi-override;
+                        }
+                    </xmp>
+                </li>
+                <li>
+                    <h3>Vertical Alignment</h3>
+                    <xmp>
+                        img.a {
+                        vertical-align: baseline;
+                        vertical-align: text-top;vertical-align: super;
+                        vertical-align: text-bottom;vertical-align: sub;
+                        }
+                    </xmp>
+                </li>
+                <li>
+                    <h3>Text Decoration</h3>
+                    <xmp>
+                        h1,p {
+                        text-decoration-line: overline;
+                        text-decoration-line: line-through;
+                        text-decoration-line: underline;
+                        text-decoration-line: overline underline;
+
+                        text-decoration-color: red;
+
+                        text-decoration-style: solid;
+                        text-decoration-style: double;
+                        text-decoration-style: dotted;
+                        text-decoration-style: dashed;
+                        text-decoration-style: wavy;
+
+                        text-decoration-thickness: auto;
+                        text-decoration-thickness: 5px;
+                        }
+                    </xmp>
+                </li>
+                <li>
+                    <h3>Text Decoration Shorthand Property</h3>
+                    <xmp>
+                        p {
+                        text-decoration: underline red double 5px;
+                        }
+                    </xmp>
+                </li>
+                <li>
+                    <h3>A Small Tip</h3>
+                    <xmp>
+                        <!-- All links in HTML are underlined by default. Sometimes you see that links are styled with no underline. 
+                        The text-decoration: none; is used to remove the underline from links, like this: -->
+                        a {
+                        text-decoration: none;
+                        }
+                    </xmp>
+                </li>
+                <li>
+                    <h3>Text Transformation</h3>
+                    <xmp>
+                        p.uppercase {
+                        text-transform: uppercase;
+                        }
+
+                        p.lowercase {
+                        text-transform: lowercase;
+                        }
+
+                        p.capitalize {
+                        text-transform: capitalize;
+                        }
+                    </xmp>
+                </li>
+                <li>
+                    <h3>Letter Spacing</h3>
+                    <xmp>
+                        h1 {
+                        letter-spacing: 5px;
+                        }
+
+                        h2 {
+                        letter-spacing: -2px;
+                        }
+                    </xmp>
+                </li>
+                <li>
+                    <h3>Line Height</h3>
+                    <xmp>
+                        p.small {
+                        line-height: 0.8;
+                        }
+
+                        p.big {
+                        line-height: 1.8;
+                        }
+                    </xmp>
+                </li>
+                <li>
+                    <h3>Word Spacing</h3>
+                    <xmp>
+                        p.one {
+                        word-spacing: 10px;
+                        }
+
+                        p.two {
+                        word-spacing: -2px;
+                        }
+                    </xmp>
+                </li>
+                <li>
+                    <h3>Text Shadow</h3>
+                    <ul>
+                        <li>
+                            <xmp>
+                                <!-- the horizontal shadow (2px) and the vertical shadow (2px): -->
+                                h1 {
+                                text-shadow: 2px 2px;
+                                }
+                            </xmp>
+                            <h2 style="text-shadow: 2px 2px;">hello world</h2>
+                        </li>
+                        <li>
+                            <xmp>
+                                <!-- add a color (red) to the shadow: -->
+                                h1 {
+                                text-shadow: 2px 2px red;
+                                }
+                            </xmp>
+                            <h2 style="text-shadow: 2px 2px red;">hello world</h2>
+                        </li>
+                        <li>
+                            <xmp>
+                                <!-- add a blur effect (5px) to the shadow: -->
+                                h1 {
+                                text-shadow: 2px 2px 5px red;
+                                }
+                            </xmp>
+                            <h2 style="text-shadow: 2px 2px 5px red;">hello world</h2>
+                        </li>
+                        <li>
+                            <xmp>
+                                <!-- Text-shadow with red and blue neon glow: -->
+                                h1 {
+                                text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+                                }
+                            </xmp>
+                            <h2 style="text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;">hello world</h2>
+                        </li>
+
+                    </ul>
+                </li>
+            </ul>
+            <h2>Fonts</h2>
+            <ul>
+                <xmp>
+                    <h1 class="font-effect-neon">Neon Effect</h1>
+                </xmp>
+                <h1 class="font-effect-neon">Neon Effect</h1>
+                <xmp>
+                    <h1 class="font-effect-outline">Outline Effect</h1>
+
+                </xmp>
+                <h1 class="font-effect-outline">Outline Effect</h1>
+                <xmp>
+                    <h1 class="font-effect-emboss">Emboss Effect</h1>
+                </xmp>
+                <h1 class="font-effect-emboss">Emboss Effect</h1>
+                <xmp>
+                    <h1 class="font-effect-shadow-multiple">Multiple Shadow Effect</h1>
+                </xmp>
+                <h1 class="font-effect-shadow-multiple">Multiple Shadow Effect</h1>
+            </ul>
+            <ul>
+                <li>Font shorthand property</li>
+                <xmp>
+                    p.b {
+                    font: italic small-caps bold 14px/30px Georgia, serif;
+                    }
+                </xmp>
+                <p style="font: italic small-caps bold 12px/30px Georgia, serif;">This is a paragraph. The font is set
+                    to italic and bold, the font size is set to 14 pixels, the line height is set to 30 pixels, and the
+                    font family is Georgia.</p>
+
+            </ul>
+
+</body>
+
+</html>
